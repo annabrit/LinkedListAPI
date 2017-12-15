@@ -6,7 +6,7 @@ const userSchema = new Schema(
 	{
 		firstName : String, //add character limit later!
 		lastName : String, //add character limit later!
-		userName : String, //limit
+		userName : { type : 'String', unique : true } //limit
 		password : Password, //?????
 		currentCompany : ,//reference association thingy
 		photo : String, //valid url? needs check??
