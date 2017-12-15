@@ -1,13 +1,13 @@
 const express = require('express');
 
-const usersHandler = require('../handlers');
+const  { usersHandler } = require('../handlers');
 
 const router = express.Router();
 
 router
 	.route('/users')
-		.get(usersHandler.getUsers) //put function here
-		.post(usersHandler.createUser) //put function here
+		.get(usersHandler.getUsers) 
+		.post(usersHandler.createUser)
 
 router
 	.route('/users/:id')
