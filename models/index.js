@@ -15,3 +15,4 @@ mongoose
 
 exports.User = require('./User')	
 exports.Job = require('./Job')
+exports.Company = require('./Company')

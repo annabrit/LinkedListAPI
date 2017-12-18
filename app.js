@@ -9,7 +9,9 @@ app.use(bodyParser.json());
 
 //redirect to home page: sign in? log in? 
 const { usersRouter} = require('./routers');
+const { companiesRouter} = require('./routers');
 app.use(usersRouter);
+app.use(companiesRouter);
 
 const { jobsRouter } = require('./routers');
 app.use(jobsRouter);
