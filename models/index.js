@@ -14,3 +14,4 @@ mongoose
 	})
 
 exports.User = require('./User')	
+exports.Company = require('./Company')	
