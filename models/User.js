@@ -8,12 +8,12 @@ const userSchema = new Schema(
 		lastName : String, //add character limit later!
 		userName : { type : 'String', unique : true }, //limit
 		password : String, //change!
-		currentCompany : String ,//reference association thingy
+		currentCompany : {type: mongoose.Schema.Types.ObjectId, ref: 'Company'},
 		photo : String, //valid url? needs check??
 		experience : 
 			[{
 				jobTitle : String,
-				company : String,//association 
+				company : {type: mongoose.Schema.Types.ObjectId, ref: 'Company'},
 				startDate : Date, //???
 				endDate : Date
 			}],

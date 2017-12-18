@@ -9,13 +9,13 @@ const companySchema = new Schema(
 		handle: String, // limit 
 		password: String, // limit 
 		logo: String, // valid URL
-		employess :
+		employees :
 			[{
-				userId: String
+				userId: {type: mongoose.Schema.Types.ObjectId, ref: 'User'}
 			}],
 		jobs :
 			[{
-				jobId: String
+				jobId: {type: mongoose.Schema.Types.ObjectId, ref: 'Job'}
 			}]
 	}
 );
