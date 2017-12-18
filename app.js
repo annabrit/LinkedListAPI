@@ -11,6 +11,9 @@ app.use(bodyParser.json());
 const { usersRouter} = require('./routers');
 app.use(usersRouter);
 
+const { jobsRouter } = require('./routers');
+app.use(jobsRouter);
+
 app.use('/', (req, res, next) => {
 	return response.send("This is running")
 });
