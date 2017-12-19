@@ -5,7 +5,7 @@ const { Schema } = mongoose;
 const jobSchema = new Schema(
 	{
 		title : String, 
-		company : String, 
+		company : {type: mongoose.Schema.Types.ObjectId, ref: 'Company'}, 
 		salary : Number,
 		equity : Number,
 	}, {timestamps: true} //does this work?????
